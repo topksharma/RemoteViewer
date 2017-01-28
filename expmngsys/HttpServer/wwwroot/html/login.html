@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title>Login</title>
+	<!--<script src="js/login.js"></script>-->
+	<link rel="stylesheet" type="text/css" href="css/login.css" />
+	<!--<link rel="stylesheet" type="text/css" href="css/home.css" />-->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+	<!--<script src="js/common.js"></script>-->
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+	<script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+
+	<div class="container">
+		<div class="card card-container">
+			<!-- <img class="profile-img-card" src="//lh3.googleusercontent.com/-6V8xOA6M7BA/AAAAAAAAAAI/AAAAAAAAAAA/rzlHcD0KYwo/photo.jpg?sz=120" alt="" /> -->
+			<img id="profile-img" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
+			<p id="profile-name" class="profile-name-card"></p>
+			<form class="form-signin" method="post">
+				<span id="reauth-email" class="reauth-email"></span>
+				<input type="email" id="inputEmail" name="txtEmail" class="form-control" placeholder="Email address" required autofocus>
+				<input type="password" id="inputPassword" name="txtPassword" class="form-control" placeholder="Password" required>
+				<!--<div id="remember" class="checkbox">
+					<label>
+						<input type="checkbox" value="remember-me"> Remember me
+					</label>
+				</div>-->
+				<button class="btn btn-lg btn-primary btn-block btn-signin" name="btnLogin" type="submit">Sign in</button>
+			</form><!-- /form -->
+			<a href="#" class="forgot-password">
+				Forgot the password?
+			</a>
+			<a href="register.html" class="login-register">
+				Register?
+			</a>
+		</div><!-- /card-container -->
+	</div><!-- /container -->
+	<!--<div class="container">
+			<div class="login-container">
+				<div id="output"></div>
+				<div class="avatar"></div>
+				<div class="form-box">
+					<form action="" method="">
+						<input name="user" type="text" placeholder="username">
+						<input type="password" placeholder="password">
+						<button class="btn btn-info btn-block login" type="submit">Login</button>
+					</form>
+				</div>
+			</div>
+
+		</div>-->
+	<!--<div class="divLogin">
+		<fieldset>
+			<legend>Enter Your Credentials </legend>
+			<form method="post">
+				<input type="email" name="txtEmail" placeholder="email:" autofocus/><br/><br/>
+				<input type="password" name="txtPassword" placeholder="password:"/><br/><br/>
+				<!--<input type="email" id="txtEmail" placeholder="email:" autofocus/><br/><br/>-->
+	<!--<input type="password" id="txtPassword" placeholder="password:"/><br/><br/>-->
+	<!--<input type="submit" value="Login" class="btnLogin" name="btnLogin"/>-->
+	<!--<input type="button" value="Login" class="btnLogin" name="btnLogin" onclick="btnLoginClicked()"/>-->
+	<!--</form>-->
+	<!--</fieldset>-->
+	<!--</div>-->-->
+	<div id="divLoginError" style="text-align: center">
+		{.LoginError}
+	</div>
+</body>
+</html>

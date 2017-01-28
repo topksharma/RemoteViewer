@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Welcome</title>
+	<link rel="stylesheet" type="text/css" href="css/home.css" />
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+	<script src="js/common.js"></script>
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+	<script src="js/bootstrap.min.js"></script>
+</head>
+<body onload="onBodyLoad()">
+	<div class="container">
+		<div id="divHeader" class="row">
+			<div class="col-lg-12 col-lg-push-3">
+				<div class="row">
+					<div class="col-sm-4 col-sm-push-1">
+						<p hidden id="pHidden">{.UserName}</p>
+						<h3 style="text-align: right">Welcome - [{.UserName}]</h3>
+					</div>
+					<div class="col-sm-4 col-sm-push-1">
+						<h3 id="hDateTime"></h3>
+					</div>
+					<div class="col-sm-4 col-sm-push-1">
+						<a href="home.html">
+							<img src="images/home.png" style="width: 50px; height: 50px; cursor: pointer">
+						</a>
+						<!--<button id="btnShowFiles" class="btnShowFiles" onclick="btnShowFilesClicked()">ShowFiles</button>-->
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row" id="content">
+			<div class="col-lg-4 col-lg-push-2" style="height: 700px; overflow-y: visible; overflow-x: hidden">
+				<fieldset>
+					<legend>Please select files to transfer</legend>
+					{.ListFiles}
+				</fieldset>
+			</div>
+			<div class="col-lg-8">
+				<div class="row">
+					<h2 id="hPName" style="text-align: left"></h2>
+					<div class="col-md-12 col-md-push-4">
+						<button id="btnTransferFiles" class="btnShowFiles" onclick="btnTransferFilesClicked()">Download Files</button>
+
+						<!--<canvas id="pCanvas" width="800" height="500" style="border: 1px solid #000000;margin-top: 50px"></canvas>-->
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="progress" style="height: 20px;">
+					<div id="fileProgressBar" class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="display: none">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-12">
+				<div id="divError">
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<span style="text-align: right">@ 2016 pravo.com</span>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

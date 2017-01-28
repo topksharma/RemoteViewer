@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<title>Check your acounts</title>
+	<link rel="stylesheet" type="text/css" href="css/home.css"/>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+	<script src="js/acounts.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+</head>
+
+<body onload="onBodyLoad()">
+	<div class="container">
+		<div id="divHeader" class="row">
+			<div class="col-md-12">
+				<p hidden id="pHidden">{.UserName}</p>
+				<h3 style="text-align: right">Welcome - [{.UserName}]</h3>
+			</div>
+		</div>
+		<div class="row" id="content">
+			<div class="col-lg-4 col-lg-pull-4" style="height: 700px; overflow-y: visible; overflow-x: hidden">
+				{.ListYears}
+			</div>
+			<div class="col-lg-8">
+				<div class="row">
+					<div class="col-md-12 col-md-pull-4">
+						{.AcountRow}
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<span style="text-align: right">@ 2016 pravo.com</span>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

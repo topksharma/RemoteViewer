@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Welcome</title>
+	<link rel="stylesheet" type="text/css" href="css/home.css" />
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+	<script src="js/common.js"></script>
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<!--<script src="http://maps.googleapis.com/maps/api/js"></script>-->
+</head>
+<body onload="onBodyLoad()">
+	<div class="container">
+		<div id="divHeader" class="row">
+			<div class="col-md-4">
+				<p hidden id="pHidden">{.UserName}</p>
+				<h3 style="text-align: right">Welcome - [{.UserName}]</h3>
+			</div>
+			<div class="col-md-2">
+				<h3 id="hDateTime"></h3>
+			</div>
+			<div class="col-md-2">
+				<form action="showFiles.html" method="post">
+					<input type="hidden" name="SHOWFILES" value="{.UserName}" />
+					<button id="btnShowFiles" class="btnShowFiles">Show Files</button>
+				</form>
+			</div>
+			<div class="col-md-2">
+				<form action="uploadFiles.html" method="post">
+					<input type="hidden" name="UPLOADFILES" value="{.UserName}" />
+					<button id="btnUploadFiles" class="btnShowFiles">Upload File</button>
+				</form>
+			</div>
+			<div class="col-md-2" style="margin-top: 10px">
+				<a href="chat.html?username={.UserName}">
+					<img src="images/wechat.png" style="width: 50px; height: 50px; cursor: pointer">
+				</a>
+			</div>
+		</div>
+		<div class="row" id="content">
+			<div class="col-lg-4 col-lg-pull-4" style="height: 700px; overflow-y: visible; overflow-x: hidden">
+				{.ListProcess}
+			</div>
+			<div class="col-lg-8">
+				<div class="row">
+					<h2 id="hPName" style="text-align: left"></h2>
+					<div class="col-md-12 col-md-pull-4">
+						<canvas id="pCanvas" width="800" height="500" style="border: 1px solid #000000;margin-top: 50px"></canvas>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<span style="text-align: right">@ 2016 pravo.com</span>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

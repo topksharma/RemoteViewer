@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3D4FD967-4847-45D8-9993-3DB0B4072B74}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HttpServer</RootNamespace>
+    <AssemblyName>HttpServer</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Tcp.Common\Tcp.Common.csproj">
+      <Project>{b4e1decb-c264-484f-9111-d6ffeff973a0}</Project>
+      <Name>Tcp.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="database\users.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="wwwroot\css\bootstrap.min.css" />
+    <Content Include="wwwroot\css\chat.css" />
+    <Content Include="wwwroot\css\fileinput.css" />
+    <Content Include="wwwroot\css\footer.css" />
+    <Content Include="wwwroot\css\header.css" />
+    <Content Include="wwwroot\css\home_style.css" />
+    <Content Include="wwwroot\css\register.css" />
+    <Content Include="wwwroot\css\uploadfile.css" />
+    <Content Include="wwwroot\css\login.css" />
+    <Content Include="wwwroot\css\home.css" />
+    <Content Include="wwwroot\html\badreq.html" />
+    <Content Include="wwwroot\html\chat.html" />
+    <Content Include="wwwroot\html\acounts.html" />
+    <Content Include="wwwroot\html\home.html" />
+    <Content Include="wwwroot\html\register_success.html" />
+    <Content Include="wwwroot\html\register.html" />
+    <Content Include="wwwroot\html\uploadFiles.html" />
+    <Content Include="wwwroot\html\xdefault.html" />
+    <Content Include="wwwroot\html\showFiles.html" />
+    <Content Include="wwwroot\html\xhome.html" />
+    <Content Include="wwwroot\html\login.html" />
+    <Content Include="wwwroot\images\spreadsheet.png" />
+    <Content Include="wwwroot\images\wechat.png" />
+    <Content Include="wwwroot\images\favicon.png" />
+    <Content Include="wwwroot\images\home.png" />
+    <Content Include="wwwroot\js\bootstrap.min.js" />
+    <Content Include="wwwroot\js\acounts.js" />
+    <Content Include="wwwroot\js\fileinput.js" />
+    <Content Include="wwwroot\js\home.js" />
+    <Content Include="wwwroot\js\test.js" />
+    <Content Include="wwwroot\js\login.js" />
+    <Content Include="wwwroot\js\common.js" />
+    <Content Include="wwwroot\js\jquery-3.0.0.min.js" />
+    <Content Include="wwwroot\js\uploadFile.js" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

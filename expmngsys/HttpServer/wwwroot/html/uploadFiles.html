@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Welcome</title>
+	<link rel="stylesheet" type="text/css" href="css/uploadfile.css" />
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/uploadFile.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div id="divHeader" class="row">
+			<div class="col-lg-12 col-lg-push-3">
+				<div class="row">
+					<div class="col-sm-8 col-sm-push-1">
+						<p hidden id="pHidden">{.UserName}</p>
+						<h3 style="text-align: right">Welcome - [{.UserName}]</h3>
+					</div>
+					<div class="col-sm-4 col-sm-push-1">
+						<a href="home.html">
+							<img src="images/home.png" style="width: 50px; height: 50px; cursor: pointer">
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row" id="content">
+			<div class="col-lg-8">
+				<div class="col-md-12 col-md-push-4">
+					<input type="file" id="uploadfile" class="btnUpload" name="uploadfile" /><br /><br />
+					<input type="button" value="upload" class="btnUpload" onclick="btnUploadFileClicked()" />
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<span style="text-align: right">@ 2016 pravo.com</span>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
